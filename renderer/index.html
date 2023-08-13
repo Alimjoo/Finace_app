@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+  <title>ESG</title>
+  <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="./css/search.css">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+  <div class="mycontainer">
+    <div class="search-container">  
+      <form id="contactForm" onsubmit="CalculateESG(event)">
+        <input name="name" class="form-control search-input" type="text" id="searchInput" placeholder="e.g 600000">
+
+        <div class="select-submit">
+          <select class="form-select select-year" aria-label="Default select example" name="select">
+            <option selected value="2020/12/31">2020/12/31</option>
+            <option value="2019/12/31">2019/12/31</option>
+            <option value="2018/12/31">2018/12/31</option>
+            <option value="2017/12/31">2017/12/31</option>
+            <option value="2016/12/31">2016/12/31</option>
+            <option value="2015/12/31">2015/12/31</option>
+            <option value="2014/12/31">2014/12/31</option>
+            <option value="2013/12/31">2013/12/31</option>
+            <option value="2012/12/31">2012/12/31</option>
+            <option value="2011/12/31">2011/12/31</option>
+          </select>
+          <button class="submit-button btn btn-success"  type="submit">Submit</button>
+          
+        </div>
+        <div class="notfound alert alert-danger alert-dismissible fade show" role="alert" style="display: none;">
+            This Stock Info Not Found !
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    </form>
+    </div>  
+
+    <div class="vertical-line" id="border"></div>
+
+    <div class="result-container">
+      <div class="card" style="width: 20rem;">
+       <h1 class="esg-score" id="list-score">?</h1>
+        <div class="card-body">
+          <h5 class="card-title">ESG Score</h5>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"> Stock Code: <span id="list-stock-code">?</span></li>
+            <li class="list-group-item"> Environment: <span id="list-env">?</span></li>
+            <li class="list-group-item"> Social: <span id="list-social">?</span></li>
+            <li class="list-group-item"> Government: <span id="list-govern">?</span></li>
+            <li class="list-group-item"> Date: <span id="list-date">?</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="./js/const.js"></script>
+  <script src="./js/esg_calculate.js"></script>
+  <script src="./js/search.js"></script>
+</body>
+</html>
