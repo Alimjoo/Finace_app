@@ -18,6 +18,10 @@ const list_social = document.querySelector('#list-social');
 const list_govern = document.querySelector('#list-govern');
 const list_date = document.querySelector('#list-date');
 const list_score = document.querySelector('#list-score');
+const ESG_table_bodey_holder = document.querySelector('#ESG_table_bodey_holder');
+const ESG_table_head_holder = document.querySelector('#ESG_table_head_holder');
+const table_biaoti = document.querySelector('#table_biaoti');
+const export_to_pdf = document.querySelector('#export_to_pdf');
 
 //weight
 const weights = {
@@ -26,3 +30,17 @@ const weights = {
   "Governance": 0.26
 }
 
+// current code ID
+
+var current_stuck_code = '?';
+
+// table_chart result
+
+// years
+const all_year = [
+  "2011/12/31", "2012/12/31",
+  "2013/12/31", "2014/12/31", 
+  "2015/12/31", "2016/12/31",
+  "2017/12/31", "2018/12/31",
+  "2019/12/31", "2020/12/31"
+]

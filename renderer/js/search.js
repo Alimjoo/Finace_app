@@ -6,3 +6,7 @@ function CalculateSingleESG(event) {
   const select = formData.get('select');
   return [name, select];
 }
+
+function Hide_alert(){
+  notfound_alert.style.display = 'none';
+}
